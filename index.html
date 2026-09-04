@@ -3,114 +3,376 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutzerklärung – Collixa</title>
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d1117">
+  <title>Datenschutzerklärung · Privacy Policy – Collixa</title>
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0d1117;color:#f0f3f6;line-height:1.65}
-    main{width:min(900px,calc(100% - 32px));margin:48px auto}
-    h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:8px}
-    h2{margin-top:0;font-size:1.25rem}
-    .brand,.placeholder{color:#f2b632}
-    .updated{color:#a8b3c1}
-    section{background:#161b22;border:1px solid #2b3440;border-radius:16px;padding:24px;margin-bottom:16px}
-    footer{text-align:center;color:#a8b3c1;margin-top:32px}
-    a{color:#f2b632}
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-elevated: #1d242d;
+      --border: #2b3440;
+      --text: #f0f3f6;
+      --muted: #a8b3c1;
+      --accent: #f2b632;
+      --accent-soft: rgba(242, 182, 50, 0.12);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 48px auto;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 8px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+    }
+
+    p:first-child { margin-top: 0; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 1.3rem;
+    }
+
+    .brand {
+      color: var(--accent);
+    }
+
+    .updated {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .language-switcher button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+      color: var(--muted);
+      background: transparent;
+    }
+
+    .language-switcher button[aria-pressed="true"] {
+      color: var(--text);
+      background: var(--accent-soft);
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+
+    .language-switcher button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    section.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    .policy[hidden] {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 32px;
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 24px, 900px);
+        margin-top: 28px;
+      }
+
+      section.card {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Datenschutzerklärung für <span class="brand">Collixa</span></h1>
-    <p class="updated">Stand: 25. August 2026</p>
+    <h1><span class="brand">Collixa</span></h1>
+
+    <div class="language-switcher" role="group" aria-label="Sprache / Language">
+      <button type="button" id="lang-de" aria-pressed="true">Deutsch</button>
+      <button type="button" id="lang-en" aria-pressed="false">English</button>
+    </div>
   </header>
 
-  <section>
-    <h2>1. Verantwortlicher</h2>
-    <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit Collixa ist:</p>
-    <p>
-      <span class="placeholder">David Körner</span><br>
-      E-Mail: <span class="placeholder">collixa.app@gmail.com</span>
-    </p>
-  </section>
+  <article id="policy-de" class="policy" lang="de">
+    <header>
+      <h1>Datenschutzerklärung</h1>
+      <p class="updated">Stand: 4. September 2026</p>
+    </header>
 
-  <section>
-    <h2>2. Welche Daten verarbeitet Collixa?</h2>
-    <p>Collixa ist eine App zur digitalen Organisation physischer Sammelkarten und Aufbewahrungsorte wie Bindern, Seiten und Fächern.</p>
-    <p>Die vom Nutzer innerhalb der App eingegebenen Sammlungsdaten werden im aktuellen Funktionsumfang lokal auf dem jeweiligen Gerät gespeichert.</p>
-    <p>Dazu können insbesondere gehören:</p>
-    <ul>
-      <li>Namen von Sammelkarten</li>
-      <li>Sprache, Zustand und Variante einer Karte</li>
-      <li>Notizen zu Karten</li>
-      <li>optionale Sortier- bzw. Identifikationsdaten, zum Beispiel eine Sortiernummer</li>
-      <li>Namen und Eigenschaften von Bindern</li>
-      <li>Positionen von Karten innerhalb von Bindern, Seiten und Fächern</li>
-      <li>gespeicherte Sortierregeln je Binder</li>
-      <li>App-Einstellungen, zum Beispiel die ausgewählte Sprache</li>
-    </ul>
-    <p>Diese Daten werden im aktuellen Funktionsumfang von Collixa ausschließlich lokal auf dem Gerät gespeichert.</p>
-  </section>
+    <section class="card">
+      <h2>1. Verantwortlicher</h2>
+      <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit Collixa ist:</p>
+      <p>
+        David Körner<br>
+        E-Mail: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>
+      </p>
+    </section>
 
-  <section>
-    <h2>3. Keine Übermittlung von Sammlungsdaten</h2>
-    <p>Collixa übermittelt die innerhalb der App gespeicherten Sammlungsdaten im aktuellen Funktionsumfang nicht an eigene Server oder sonstige externe Dienste.</p>
-    <p>Es findet derzeit keine Cloud-Synchronisation oder serverseitige Sicherung der Sammlung statt.</p>
-    <p>Externe Karten- oder TCG-Datenquellen sowie eine automatische Online-Abfrage von Kartendaten sind derzeit nicht Bestandteil des Funktionsumfangs.</p>
-  </section>
+    <section class="card">
+      <h2>2. Zweck der App</h2>
+      <p>Collixa ist eine App zur digitalen Organisation physischer Sammelkarten und ihrer Aufbewahrung in Bindern, Seiten und Fächern. Die vom Nutzer eingegebenen Sammlungsdaten werden im aktuellen Funktionsumfang lokal auf dem jeweiligen Gerät gespeichert.</p>
+    </section>
 
-  <section>
-    <h2>4. Feedback per E-Mail</h2>
-    <p>Collixa bietet eine freiwillige Feedback-Funktion per E-Mail an. Wenn der Nutzer diese Funktion auswählt, wird die auf dem Gerät eingerichtete E-Mail-Anwendung geöffnet und eine Nachricht an die Collixa-Kontaktadresse vorbereitet.</p>
-    <p>Zur technischen Einordnung des Feedbacks können in den vorbereiteten Nachrichtentext die installierte App-Version, die Build-Nummer sowie Betriebssystem und Betriebssystemversion aufgenommen werden.</p>
-    <p>Die E-Mail wird erst versendet, wenn der Nutzer sie in seiner E-Mail-Anwendung selbst absendet. Der Inhalt der Nachricht und die dabei verwendete E-Mail-Adresse werden anschließend über den vom Nutzer verwendeten E-Mail-Anbieter verarbeitet. Für diese Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen E-Mail-Anbieters.</p>
-  </section>
+    <section class="card">
+      <h2>3. Lokal gespeicherte Daten</h2>
+      <p>Zu den lokal gespeicherten Daten können insbesondere gehören:</p>
+      <ul>
+        <li>Namen und optionale Identifikations- oder Sortierdaten von Sammelkarten</li>
+        <li>Sprache, Zustand und Variante einer Karte</li>
+        <li>Notizen zu Karten</li>
+        <li>Namen und Eigenschaften von Bindern</li>
+        <li>Positionen von Karten innerhalb von Bindern, Seiten und Fächern</li>
+        <li>Sortierregeln und eigene Sortiergruppen je Binder</li>
+        <li>App-Einstellungen, zum Beispiel die ausgewählte Sprache</li>
+      </ul>
+      <p>Collixa verwendet SQLite als lokale Datenbank auf dem Gerät. Eine Karte kann auch ohne zusätzliche Kartenidentität oder ohne Position in einem Binder gespeichert werden.</p>
+    </section>
 
-  <section>
-    <h2>5. Keine Benutzerkonten</h2>
-    <p>Collixa verwendet derzeit keine Benutzerkonten und verlangt keine Registrierung oder Anmeldung.</p>
-  </section>
+    <section class="card">
+      <h2>4. Keine Collixa-Konten, Werbung oder Analyse</h2>
+      <p>Collixa verwendet keine Benutzerkonten und verlangt keine Registrierung oder Anmeldung.</p>
+      <p>Die App enthält keine Werbung. Collixa setzt keine eigenen Analyse- oder Trackingdienste zur Auswertung des Nutzerverhaltens ein und erstellt keine Werbeprofile.</p>
+      <p>Collixa bietet keine eigene Cloud-Synchronisation oder serverseitige Sicherung der Sammlung an. Die gespeicherten Sammlungsdaten werden nicht an eigene Collixa-Server oder externe Karten- und TCG-Datenquellen übertragen. Allgemeine Geräte- oder App-Backups des Betriebssystems richten sich nach den Einstellungen und Diensten des jeweiligen Geräts und sind keine Collixa-Cloud-Synchronisation.</p>
+    </section>
 
-  <section>
-    <h2>6. Keine Werbung und kein Profiling</h2>
-    <p>Collixa enthält derzeit keine Werbung. Es findet kein Profiling für Werbezwecke und keine personalisierte Werbung statt.</p>
-  </section>
+    <section class="card">
+      <h2>5. Feedback per E-Mail</h2>
+      <p>Collixa bietet eine freiwillige Feedback-Funktion an. Wenn der Nutzer diese Funktion auswählt, öffnet Collixa die auf dem Gerät eingerichtete E-Mail-App und bereitet eine Nachricht an die Collixa-Kontaktadresse vor.</p>
+      <p>Die vorbereitete Nachricht kann die installierte App-Version, die Build-Nummer sowie Angaben zum Betriebssystem enthalten. Die Nachricht wird erst versendet, wenn der Nutzer sie in der E-Mail-App selbst absendet. Collixa liest keine E-Mail-Konten, Kontakte oder Nachrichten aus. Für den Versand und die weitere Verarbeitung gelten die Datenschutzbestimmungen des verwendeten E-Mail-Anbieters.</p>
+    </section>
 
-  <section>
-    <h2>7. Analyse- und Trackingdienste</h2>
-    <p>Collixa verwendet derzeit keine eigenen Analyse- oder Trackingdienste zur Auswertung des Nutzerverhaltens.</p>
-  </section>
+    <section class="card">
+      <h2>6. App- und Update-Verbindungen</h2>
+      <p>Für die Bereitstellung sowie die Prüfung und Installation von App-Updates können Netzwerkverbindungen über die verwendete Distributions- und Update-Infrastruktur entstehen. Dazu gehören insbesondere Google Play sowie Expo/EAS Updates.</p>
+      <p>Collixa überträgt die lokal gespeicherten Sammlungsdaten nicht als Bestandteil dieser Updateprüfungen. Für die technische Verarbeitung durch die jeweilige Plattform gelten deren eigene Datenschutzbestimmungen.</p>
+    </section>
 
-  <section>
-    <h2>8. Speicherung und Löschung</h2>
-    <p>Die Daten der Sammlung werden lokal auf dem Gerät gespeichert.</p>
-    <p>Nutzer können einzelne Karten und Binder innerhalb der App löschen. Beim Löschen oder Zurücksetzen der App bzw. beim Löschen der zugehörigen App-Daten können lokal gespeicherte Daten ebenfalls verloren gehen.</p>
-    <p>Eine serverseitige Sicherung durch Collixa findet derzeit nicht statt.</p>
-  </section>
+    <section class="card">
+      <h2>7. Öffentliche Datenschutzerklärung</h2>
+      <p>Die öffentliche Datenschutzerklärung wird über GitHub Pages bereitgestellt. Beim Öffnen der öffentlichen Seite wird eine Verbindung zur Infrastruktur von GitHub hergestellt. Für die dabei erfolgende technische Verarbeitung gelten die Datenschutzbestimmungen von GitHub.</p>
+    </section>
 
-  <section>
-    <h2>9. Berechtigungen</h2>
-    <p>Collixa verwendet im aktuellen Funktionsumfang keine Berechtigungen für Kamera, Mikrofon, Kontakte oder Standort zur Verwaltung der Sammlung.</p>
-    <p>Für die freiwillige Feedback-Funktion kann die auf dem Gerät vorhandene E-Mail-Anwendung geöffnet werden. Collixa liest dabei keine E-Mail-Konten, Kontakte oder Nachrichten aus.</p>
-    <p>Sollte sich der Funktionsumfang zukünftig ändern, wird diese Datenschutzerklärung entsprechend aktualisiert.</p>
-  </section>
+    <section class="card">
+      <h2>8. Berechtigungen</h2>
+      <p>Collixa verwendet für die Verwaltung der Sammlung derzeit keine Berechtigungen für Kamera, Mikrofon, Kontakte oder Standort.</p>
+    </section>
 
-  <section>
-    <h2>10. Datensicherheit</h2>
-    <p>Die Sammlungsdaten verbleiben im aktuellen Funktionsumfang lokal auf dem Gerät. Nutzer sollten beachten, dass die Sicherheit dieser Daten damit auch von der Sicherheit des verwendeten Geräts und dessen Betriebssystems abhängt.</p>
-  </section>
+    <section class="card">
+      <h2>9. Speicherung und Löschung</h2>
+      <p>Nutzer können einzelne Karten innerhalb der App löschen. Dabei werden auch ihre zugehörigen Positionen entfernt.</p>
+      <p>Beim Löschen eines Binders werden der Binder, seine Positionen und seine Sortiereinstellungen entfernt. Die darin enthaltenen physischen Karten werden nicht automatisch gelöscht, sondern bleiben ohne Binderzuordnung erhalten.</p>
+      <p>Beim Deinstallieren oder Zurücksetzen der App beziehungsweise beim Löschen ihrer App-Daten können die lokal gespeicherten Daten verloren gehen. Collixa hält keine serverseitige Kopie bereit, aus der diese Daten wiederhergestellt werden könnten.</p>
+    </section>
 
-  <section>
-    <h2>11. Änderungen dieser Datenschutzerklärung</h2>
-    <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich Funktionen von Collixa oder gesetzliche Anforderungen ändern.</p>
-    <p>Die jeweils aktuelle Fassung wird an dieser Stelle veröffentlicht.</p>
-  </section>
+    <section class="card">
+      <h2>10. Datensicherheit</h2>
+      <p>Die Sicherheit der lokal gespeicherten Daten hängt auch von der Sicherheit des verwendeten Geräts und seines Betriebssystems ab. Nutzer sollten ihr Gerät angemessen schützen und berücksichtigen, dass Collixa derzeit keine eigene Cloud-Sicherung anbietet.</p>
+    </section>
 
-  <section>
-    <h2>12. Kontakt</h2>
-    <p>Bei Fragen zum Datenschutz kannst du dich an folgende Adresse wenden:</p>
-    <p><span class="placeholder">collixa.app@gmail.com</span></p>
-  </section>
+    <section class="card">
+      <h2>11. Änderungen dieser Datenschutzerklärung</h2>
+      <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich Funktionen von Collixa, eingesetzte Dienste oder rechtliche Anforderungen ändern. Die jeweils aktuelle Fassung wird auf der öffentlichen Datenschutzseite veröffentlicht.</p>
+    </section>
+
+    <section class="card">
+      <h2>12. Kontakt</h2>
+      <p>Bei Fragen zum Datenschutz ist der Verantwortliche unter <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a> erreichbar.</p>
+    </section>
+  </article>
+
+  <article id="policy-en" class="policy" lang="en" hidden>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 4 September 2026</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Controller and contact</h2>
+      <p>The person responsible for data processing in connection with Collixa is:</p>
+      <p>
+        David Körner<br>
+        Email: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Purpose of the app</h2>
+      <p>Collixa is an app for digitally organizing physical trading cards and their storage in binders, pages, and pockets. Collection data entered by the user is stored locally on the respective device in the app's current version.</p>
+    </section>
+
+    <section class="card">
+      <h2>3. Data stored locally</h2>
+      <p>Locally stored data may include in particular:</p>
+      <ul>
+        <li>names and optional identification or sorting data for trading cards</li>
+        <li>a card's language, condition, and variant</li>
+        <li>notes about cards</li>
+        <li>binder names and properties</li>
+        <li>card placements within binders, pages, and pockets</li>
+        <li>sorting rules and custom sorting groups for each binder</li>
+        <li>app settings, such as the selected language</li>
+      </ul>
+      <p>Collixa uses SQLite as a local database on the device. A card can also be stored without an additional card identity or without a placement in a binder.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. No Collixa accounts, advertising, or analytics</h2>
+      <p>Collixa does not use user accounts and does not require registration or sign-in.</p>
+      <p>The app contains no advertising. Collixa does not use its own analytics or tracking services to evaluate user behavior and does not create advertising profiles.</p>
+      <p>Collixa does not provide its own cloud synchronization or server-side backup of the collection. Stored collection data is not transmitted to Collixa servers or external card or TCG data sources. General device or app backups provided by the operating system depend on the settings and services of the respective device and are not Collixa cloud synchronization.</p>
+    </section>
+
+    <section class="card">
+      <h2>5. Feedback by email</h2>
+      <p>Collixa provides an optional feedback feature. When the user selects this feature, Collixa opens the email app configured on the device and prepares a message to the Collixa contact address.</p>
+      <p>The prepared message may contain the installed app version, build number, and operating-system information. The message is sent only if the user sends it from the email app. Collixa does not read email accounts, contacts, or messages. The privacy terms of the email provider used by the user apply to sending and further processing.</p>
+    </section>
+
+    <section class="card">
+      <h2>6. App and update connections</h2>
+      <p>Network connections may occur through the distribution and update infrastructure used to provide the app and to check for or install updates. This includes Google Play and Expo/EAS Updates in particular.</p>
+      <p>Collixa does not transmit locally stored collection data as part of these update checks. The respective platform's privacy terms apply to technical processing performed by that platform.</p>
+    </section>
+
+    <section class="card">
+      <h2>7. Public privacy policy</h2>
+      <p>The public privacy policy is hosted through GitHub Pages. Opening the public page establishes a connection to GitHub's infrastructure. GitHub's privacy terms apply to the related technical processing.</p>
+    </section>
+
+    <section class="card">
+      <h2>8. Permissions</h2>
+      <p>Collixa currently does not use camera, microphone, contacts, or location permissions to manage the collection.</p>
+    </section>
+
+    <section class="card">
+      <h2>9. Storage and deletion</h2>
+      <p>Users can delete individual cards within the app. Their associated placements are also removed.</p>
+      <p>Deleting a binder removes the binder, its placements, and its sorting settings. The physical cards previously stored in it are not deleted automatically and remain without a binder assignment.</p>
+      <p>Locally stored data may be lost when the app is uninstalled or reset, or when its app data is cleared. Collixa does not retain a server-side copy from which this data could be restored.</p>
+    </section>
+
+    <section class="card">
+      <h2>10. Data security</h2>
+      <p>The security of locally stored data also depends on the security of the device and its operating system. Users should protect their device appropriately and be aware that Collixa currently does not provide its own cloud backup.</p>
+    </section>
+
+    <section class="card">
+      <h2>11. Changes to this privacy policy</h2>
+      <p>This privacy policy may be updated when Collixa's features, services used by the app, or legal requirements change. The current version will be published on the public privacy-policy page.</p>
+    </section>
+
+    <section class="card">
+      <h2>12. Contact</h2>
+      <p>For privacy questions, contact the controller at <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>.</p>
+    </section>
+  </article>
 
   <footer>© 2026 Collixa</footer>
 </main>
+
+<script>
+  (() => {
+    const de = document.getElementById("policy-de");
+    const en = document.getElementById("policy-en");
+    const deButton = document.getElementById("lang-de");
+    const enButton = document.getElementById("lang-en");
+
+    function setLanguage(language) {
+      const useEnglish = language === "en";
+
+      de.hidden = useEnglish;
+      en.hidden = !useEnglish;
+
+      deButton.setAttribute("aria-pressed", String(!useEnglish));
+      enButton.setAttribute("aria-pressed", String(useEnglish));
+
+      document.documentElement.lang = useEnglish ? "en" : "de";
+      document.title = useEnglish
+        ? "Privacy Policy – Collixa"
+        : "Datenschutzerklärung – Collixa";
+
+      try {
+        localStorage.setItem("collixaPrivacyLanguage", useEnglish ? "en" : "de");
+      } catch {
+        // Language preference is optional. The page works without localStorage.
+      }
+    }
+
+    let initialLanguage = "de";
+
+    try {
+      const savedLanguage = localStorage.getItem("collixaPrivacyLanguage");
+      if (savedLanguage === "de" || savedLanguage === "en") {
+        initialLanguage = savedLanguage;
+      } else if ((navigator.language || "").toLowerCase().startsWith("en")) {
+        initialLanguage = "en";
+      }
+    } catch {
+      if ((navigator.language || "").toLowerCase().startsWith("en")) {
+        initialLanguage = "en";
+      }
+    }
+
+    deButton.addEventListener("click", () => setLanguage("de"));
+    enButton.addEventListener("click", () => setLanguage("en"));
+
+    setLanguage(initialLanguage);
+  })();
+</script>
 </body>
 </html>
