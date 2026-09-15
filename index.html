@@ -150,17 +150,15 @@
 
   <article id="policy-de" class="policy" lang="de">
     <header>
-      <h1>Datenschutzerklärung</h1>
-      <p class="updated">Stand: 4. September 2026</p>
+      <h1>Datenschutzerklärung für Collixa</h1>
+      <p class="updated">Stand: 15. September 2026</p>
     </header>
 
     <section class="card">
       <h2>1. Verantwortlicher</h2>
       <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit Collixa ist:</p>
-      <p>
-        David Körner<br>
-        E-Mail: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>
-      </p>
+      <p>David Körner</p>
+      <p>E-Mail: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a></p>
     </section>
 
     <section class="card">
@@ -175,6 +173,7 @@
         <li>Namen und optionale Identifikations- oder Sortierdaten von Sammelkarten</li>
         <li>Sprache, Zustand und Variante einer Karte</li>
         <li>Notizen zu Karten</li>
+        <li>optional vom Nutzer gespeicherte Fotos der eigenen physischen Karten</li>
         <li>Namen und Eigenschaften von Bindern</li>
         <li>Positionen von Karten innerhalb von Bindern, Seiten und Fächern</li>
         <li>Sortierregeln und eigene Sortiergruppen je Binder</li>
@@ -184,10 +183,11 @@
     </section>
 
     <section class="card">
-      <h2>4. Keine Collixa-Konten, Werbung oder Analyse</h2>
+      <h2>4. Keine Collixa-Konten, Werbung oder eigenen Analysedienste</h2>
       <p>Collixa verwendet keine Benutzerkonten und verlangt keine Registrierung oder Anmeldung.</p>
       <p>Die App enthält keine Werbung. Collixa setzt keine eigenen Analyse- oder Trackingdienste zur Auswertung des Nutzerverhaltens ein und erstellt keine Werbeprofile.</p>
-      <p>Collixa bietet keine eigene Cloud-Synchronisation oder serverseitige Sicherung der Sammlung an. Die gespeicherten Sammlungsdaten werden nicht an eigene Collixa-Server oder externe Karten- und TCG-Datenquellen übertragen. Allgemeine Geräte- oder App-Backups des Betriebssystems richten sich nach den Einstellungen und Diensten des jeweiligen Geräts und sind keine Collixa-Cloud-Synchronisation.</p>
+      <p>Unabhängig davon kann das für die lokale Texterkennung eingesetzte Google-ML-Kit-SDK technische Telemetrie für Analyse und App-Funktionen verarbeiten. Diese SDK-Verarbeitung durch Google wird in Abschnitt 9 gesondert beschrieben. Collixa betreibt dafür keine eigenen Telemetrie- oder Analyseserver.</p>
+      <p>Collixa bietet keine eigene Cloud-Synchronisation oder serverseitige Sicherung der Sammlung an. Die gespeicherten Sammlungsdaten werden nicht an eigene Collixa-Server übertragen. Allgemeine Geräte- oder App-Backups des Betriebssystems richten sich nach den Einstellungen und Diensten des jeweiligen Geräts und sind keine Collixa-Cloud-Synchronisation.</p>
     </section>
 
     <section class="card">
@@ -198,56 +198,75 @@
 
     <section class="card">
       <h2>6. App- und Update-Verbindungen</h2>
-      <p>Für die Bereitstellung sowie die Prüfung und Installation von App-Updates können Netzwerkverbindungen über die verwendete Distributions- und Update-Infrastruktur entstehen. Dazu gehören insbesondere Google Play sowie Expo/EAS Updates.</p>
-      <p>Collixa überträgt die lokal gespeicherten Sammlungsdaten nicht als Bestandteil dieser Updateprüfungen. Für die technische Verarbeitung durch die jeweilige Plattform gelten deren eigene Datenschutzbestimmungen.</p>
+      <p>App-Updates werden ausschließlich als reguläre neue Releases über Google Play bereitgestellt. Collixa führt beim App-Start keine eigene Updateprüfung über Expo/EAS Updates oder eine Google-Play-In-App-Update-Integration aus.</p>
+      <p>Wenn Nutzer die App über Google Play installieren oder aktualisieren, gelten für die technische Verarbeitung durch Google Play die Datenschutzbestimmungen dieser Plattform. Collixa überträgt die lokal gespeicherten Sammlungsdaten nicht als Bestandteil der App-Bereitstellung an Google Play.</p>
     </section>
 
     <section class="card">
-      <h2>7. Öffentliche Datenschutzerklärung</h2>
+      <h2>7. Optionaler Kartenkatalog-Sync</h2>
+      <p>Nutzer können in den Einstellungen ausdrücklich einen öffentlichen Pokémon-Kartenkatalog von TCGdex herunterladen oder aktualisieren. Dabei ruft Collixa ausschließlich allgemeine öffentliche Katalogmetadaten in deutscher und englischer Sprache ab und speichert diese lokal auf dem Gerät. Die normale Kartensuche verwendet nur diesen lokalen Katalog und stellt keine Netzwerkverbindung her. Erst wenn der Nutzer eine konkrete Katalogkarte zur Identifizierung auswählt, kann Collixa deren öffentliche Katalog-ID in einem gezielten Detailabruf an TCGdex senden, um sammlungsrelevante Variantenangaben vorzuschlagen.</p>
+      <p>Collixa überträgt dabei keine OwnedCard-ID, Sammlungsdaten, Binder, Kartenpositionen, Zustand, Notizen, Nutzerbilder, Recognition-Bilder, geräteinternen IDs oder sonstigen personenbezogenen Collixa-Daten an TCGdex. Collixa lädt keine Nutzerbilder zu TCGdex hoch und lädt auch keine Kartenbilder herunter. Beim Netzwerkabruf verarbeitet TCGdex technisch übliche Verbindungsdaten, insbesondere IP-Adresse und HTTP-Anfragedaten. Für diese Verarbeitung gelten die Datenschutzinformationen von TCGdex.</p>
+    </section>
+
+    <section class="card">
+      <h2>8. Öffentliche Datenschutzerklärung</h2>
       <p>Die öffentliche Datenschutzerklärung wird über GitHub Pages bereitgestellt. Beim Öffnen der öffentlichen Seite wird eine Verbindung zur Infrastruktur von GitHub hergestellt. Für die dabei erfolgende technische Verarbeitung gelten die Datenschutzbestimmungen von GitHub.</p>
     </section>
 
     <section class="card">
-      <h2>8. Berechtigungen</h2>
-      <p>Collixa verwendet für die Verwaltung der Sammlung derzeit keine Berechtigungen für Kamera, Mikrofon, Kontakte oder Standort.</p>
+      <h2>9. Kamera und lokale Texterkennung</h2>
+      <p>Wenn Nutzer im Identifikationsablauf ausdrücklich „Scannen“ auswählen, kann Collixa eine einzelne Aufnahme der physischen Karte erstellen und den darauf sichtbaren Text mit Google ML Kit Text Recognition v2 auf dem Gerät erkennen. Das vollständige Kamerabild wird als temporäre native Bildreferenz im Arbeitsspeicher verarbeitet und nach dem Erkennungsversuch verworfen. Zusätzlich wird der vom sichtbaren Kartenrahmen festgelegte Ausschnitt vorübergehend im privaten App-Cache gespeichert. Dieser temporäre Ausschnitt wird bei erneutem Scan, Abbruch, Ablehnung oder erfolgreicher Übernahme best-effort gelöscht. Das OCR-Ergebnis wird nicht dauerhaft gespeichert.</p>
+      <p>Der Nutzer kann ausdrücklich auswählen, diesen zugeschnittenen Ausschnitt als dauerhaftes Foto der betreffenden physischen Karte zu speichern. Ohne vorhandenes Foto ist die Option vorausgewählt; ein vorhandenes Foto wird nur nach ausdrücklicher Auswahl ersetzt. Dauerhafte Kartenfotos liegen ausschließlich im privaten App-Dateispeicher, erscheinen nicht in der Galerie und werden über lokale Metadaten genau einer Karte zugeordnet. Beim Löschen der Karte werden Metadaten und Fotodatei ebenfalls entfernt; die Dateilöschung erfolgt best-effort. Ein vom Nutzer ausdrücklich erstelltes vollständiges Collixa-Backup enthält diese nutzereigenen Fotos zusammen mit den Sammlungsdaten.</p>
+      <p>Das Kartenbild und das OCR-Ergebnis werden für diesen Scan lokal verarbeitet und nicht als Recognition-Input an Google, TCGdex oder einen Collixa-Server übertragen. Collixa verwendet das gebündelte lateinische ML-Kit-Modell; für den eigentlichen OCR-Lauf ist deshalb kein Model-Download erforderlich. Nach den Hinweisen von Google kann das ML-Kit-SDK unabhängig vom eigentlichen Recognition-Input Verbindungen für Fehlerbehebungen, Modell- oder Hardware-Kompatibilität sowie technische Betriebs- und Nutzungsmetriken herstellen. Dabei können insbesondere Geräte- und App-Informationen, eine installationsbezogene Kennung, Leistungsdaten, API-Konfigurationen sowie Ereignis- und Fehlerangaben verarbeitet werden. Collixa protokolliert oder überträgt selbst keine Kartenbilder oder Base64-Bilddaten.</p>
+      <p>In der am 15. September 2026 überprüften Google-Play-Data-Safety-Erklärung sind mögliche technische ML-Kit-Telemetriedaten als optional erhoben, nicht geteilt, nicht nur sitzungsspezifisch verarbeitet und bei der Übertragung verschlüsselt angegeben. Deklariert sind Diagnosedaten für Analyse, andere App-Leistungsdaten für Analyse, App-Interaktionen für Analyse und Funktionen der App sowie Geräte- oder andere IDs für Analyse. Diese Angaben beziehen sich auf die technische SDK-Verarbeitung durch Google und nicht auf einen eigenen Collixa-Analytics-Dienst.</p>
     </section>
 
     <section class="card">
-      <h2>9. Speicherung und Löschung</h2>
-      <p>Nutzer können einzelne Karten innerhalb der App löschen. Dabei werden auch ihre zugehörigen Positionen entfernt.</p>
+      <h2>10. Manueller Backup-Export</h2>
+      <p>Nutzer können ausdrücklich ein vollständiges, portables Collixa-Backup erstellen. Es enthält eine konsistente Kopie der lokalen Datenbank einschließlich Sammlung, Einstellungen und lokalem Kartenkatalog sowie die dauerhaft gespeicherten eigenen Kartenfotos. Das Backup ist nicht verschlüsselt.</p>
+      <p>Collixa öffnet hierfür den Android-Systemdialog, in dem der Nutzer Dateiname und Speicherort auswählt. Abhängig von den auf dem Gerät eingerichteten Dokumentanbietern kann der Nutzer dabei auch einen Cloud-Speicheranbieter wählen. Collixa integriert keinen solchen Anbieter, lädt Backups nicht automatisch hoch und überträgt sie nicht an einen Collixa-Server. Für eine Speicherung bei einem externen Dokumentanbieter gelten dessen Bedingungen und Datenschutzinformationen. Nach dem Export ist der Nutzer für den Schutz, die Aufbewahrung und eine mögliche Weitergabe der exportierten Datei verantwortlich. Temporäre Snapshot- und Archivdateien im privaten App-Bereich werden nach Erfolg, Abbruch oder Fehler best-effort gelöscht.</p>
+      <p>Der Nutzer kann ebenso ausdrücklich ein Collixa-Backup über den Android-Systemdialog auswählen und lokal wiederherstellen. Collixa kopiert die ausgewählte Datei zunächst in einen privaten Staging-Bereich, prüft Struktur, Datenbank, Dateigrößen und Prüfsummen und fordert erst danach eine ausdrückliche Bestätigung an. Bei Bestätigung werden die aktuelle lokale Datenbank und die eigenen Kartenfotos durch den Backup-Stand ersetzt. Für einen fehlgeschlagenen oder unterbrochenen Restore hält Collixa vorübergehend einen privaten Rollback-Stand und ein lokales Restore-Journal vor. Staging-, Rollback- und Journaldateien werden nach einem abgeschlossenen Restore oder erfolgreicher Recovery best-effort gelöscht. Der Import erzeugt keine Netzwerkkommunikation und lädt die ausgewählte Datei nicht hoch.</p>
+    </section>
+
+    <section class="card">
+      <h2>11. Berechtigungen</h2>
+      <p>Collixa verwendet die Kameraberechtigung ausschließlich für den vom Nutzer ausgelösten lokalen Kartenscan. Die Internetberechtigung wird für den optionalen TCGdex-Katalogsync und den gezielten TCGdex-Kartendetailabruf benötigt. Für Scanner und Kartenfotos fordert Collixa keine zusätzliche Mikrofon- oder Medien-/Galerieberechtigung an; auch Kontakt- oder Standortberechtigungen werden nicht angefragt. Backup-Export und -Import verwenden den Android-Systemdialog zur Dokumentauswahl.</p>
+    </section>
+
+    <section class="card">
+      <h2>12. Speicherung und Löschung</h2>
+      <p>Nutzer können einzelne Karten innerhalb der App löschen. Dabei werden auch ihre zugehörigen Positionen und gespeicherten Kartenfoto-Metadaten entfernt; zugehörige Fotodateien werden best-effort gelöscht.</p>
       <p>Beim Löschen eines Binders werden der Binder, seine Positionen und seine Sortiereinstellungen entfernt. Die darin enthaltenen physischen Karten werden nicht automatisch gelöscht, sondern bleiben ohne Binderzuordnung erhalten.</p>
-      <p>Beim Deinstallieren oder Zurücksetzen der App beziehungsweise beim Löschen ihrer App-Daten können die lokal gespeicherten Daten verloren gehen. Collixa hält keine serverseitige Kopie bereit, aus der diese Daten wiederhergestellt werden könnten.</p>
+      <p>Beim Deinstallieren oder Zurücksetzen der App beziehungsweise beim Löschen ihrer App-Daten können die lokal gespeicherten Daten verloren gehen. Collixa hält keine serverseitige Kopie bereit, aus der diese Daten wiederhergestellt werden könnten. Ein zuvor vom Nutzer an einem geeigneten Ort gespeichertes Collixa-Backup bleibt davon unberührt und kann über die Wiederherstellungsfunktion erneut eingelesen werden.</p>
     </section>
 
     <section class="card">
-      <h2>10. Datensicherheit</h2>
-      <p>Die Sicherheit der lokal gespeicherten Daten hängt auch von der Sicherheit des verwendeten Geräts und seines Betriebssystems ab. Nutzer sollten ihr Gerät angemessen schützen und berücksichtigen, dass Collixa derzeit keine eigene Cloud-Sicherung anbietet.</p>
+      <h2>13. Datensicherheit</h2>
+      <p>Die Sicherheit der lokal gespeicherten Daten hängt auch von der Sicherheit des verwendeten Geräts und seines Betriebssystems ab. Nutzer sollten ihr Gerät und unverschlüsselte exportierte Backup-Dateien angemessen schützen. Collixa bietet keine eigene Cloud-Sicherung an.</p>
     </section>
 
     <section class="card">
-      <h2>11. Änderungen dieser Datenschutzerklärung</h2>
+      <h2>14. Änderungen dieser Datenschutzerklärung</h2>
       <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich Funktionen von Collixa, eingesetzte Dienste oder rechtliche Anforderungen ändern. Die jeweils aktuelle Fassung wird auf der öffentlichen Datenschutzseite veröffentlicht.</p>
     </section>
 
     <section class="card">
-      <h2>12. Kontakt</h2>
+      <h2>15. Kontakt</h2>
       <p>Bei Fragen zum Datenschutz ist der Verantwortliche unter <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a> erreichbar.</p>
     </section>
   </article>
 
   <article id="policy-en" class="policy" lang="en" hidden>
     <header>
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 4 September 2026</p>
+      <h1>Privacy Policy for Collixa</h1>
+      <p class="updated">Last updated: 15 September 2026</p>
     </header>
 
     <section class="card">
       <h2>1. Controller and contact</h2>
       <p>The person responsible for data processing in connection with Collixa is:</p>
-      <p>
-        David Körner<br>
-        Email: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>
-      </p>
+      <p>David Körner</p>
+      <p>Email: <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a></p>
     </section>
 
     <section class="card">
@@ -262,6 +281,7 @@
         <li>names and optional identification or sorting data for trading cards</li>
         <li>a card's language, condition, and variant</li>
         <li>notes about cards</li>
+        <li>optional photos the user saves of their own physical cards</li>
         <li>binder names and properties</li>
         <li>card placements within binders, pages, and pockets</li>
         <li>sorting rules and custom sorting groups for each binder</li>
@@ -271,10 +291,11 @@
     </section>
 
     <section class="card">
-      <h2>4. No Collixa accounts, advertising, or analytics</h2>
+      <h2>4. No Collixa accounts, advertising, or first-party analytics</h2>
       <p>Collixa does not use user accounts and does not require registration or sign-in.</p>
       <p>The app contains no advertising. Collixa does not use its own analytics or tracking services to evaluate user behavior and does not create advertising profiles.</p>
-      <p>Collixa does not provide its own cloud synchronization or server-side backup of the collection. Stored collection data is not transmitted to Collixa servers or external card or TCG data sources. General device or app backups provided by the operating system depend on the settings and services of the respective device and are not Collixa cloud synchronization.</p>
+      <p>Independently of this, the Google ML Kit SDK used for local text recognition may process technical telemetry for analytics and app functionality. This SDK processing by Google is described separately in section 9. Collixa does not operate its own telemetry or analytics servers for this purpose.</p>
+      <p>Collixa does not provide its own cloud synchronization or server-side backup of the collection. Stored collection data is not transmitted to Collixa servers. General device or app backups provided by the operating system depend on the settings and services of the respective device and are not Collixa cloud synchronization.</p>
     </section>
 
     <section class="card">
@@ -285,39 +306,60 @@
 
     <section class="card">
       <h2>6. App and update connections</h2>
-      <p>Network connections may occur through the distribution and update infrastructure used to provide the app and to check for or install updates. This includes Google Play and Expo/EAS Updates in particular.</p>
-      <p>Collixa does not transmit locally stored collection data as part of these update checks. The respective platform's privacy terms apply to technical processing performed by that platform.</p>
+      <p>App updates are provided exclusively as regular new releases through Google Play. Collixa does not perform its own update check at app startup through Expo/EAS Updates or a Google Play In-App Updates integration.</p>
+      <p>When users install or update the app through Google Play, Google Play's privacy terms apply to the platform's technical processing. Collixa does not transmit locally stored collection data to Google Play as part of app distribution.</p>
     </section>
 
     <section class="card">
-      <h2>7. Public privacy policy</h2>
+      <h2>7. Optional card catalog sync</h2>
+      <p>Users can explicitly download or update a public Pokémon card catalog from TCGdex in the settings. Collixa retrieves only general public catalog metadata in German and English and stores it locally on the device. Normal card search uses only this local catalog and does not establish a network connection. Only after the user selects a specific catalog card for identification may Collixa send that card's public catalog ID to TCGdex in one targeted detail request to suggest collection-relevant variant information.</p>
+      <p>Collixa does not transmit an OwnedCard ID, collection data, binders, card placements, condition, notes, user images, recognition images, internal device identifiers, or other personal Collixa data to TCGdex. Collixa does not upload user images to TCGdex and does not download card images. During the network request, TCGdex technically processes ordinary connection data, including the IP address and HTTP request data. TCGdex's privacy information applies to this processing.</p>
+    </section>
+
+    <section class="card">
+      <h2>8. Public privacy policy</h2>
       <p>The public privacy policy is hosted through GitHub Pages. Opening the public page establishes a connection to GitHub's infrastructure. GitHub's privacy terms apply to the related technical processing.</p>
     </section>
 
     <section class="card">
-      <h2>8. Permissions</h2>
-      <p>Collixa currently does not use camera, microphone, contacts, or location permissions to manage the collection.</p>
+      <h2>9. Camera and on-device text recognition</h2>
+      <p>When users explicitly select “Scan” in the identification flow, Collixa can capture one image of the physical card and recognize visible text on the device using Google ML Kit Text Recognition v2. The full camera image is processed as a temporary native image reference in memory and discarded after the recognition attempt. In addition, the crop defined by the visible card guide is stored temporarily in the app's private cache. This temporary crop is deleted best-effort after a rescan, cancellation, rejection, or successful promotion. The OCR result is not stored persistently.</p>
+      <p>Users can explicitly choose to save this crop as a durable photo of the relevant physical card. The option is selected by default when no photo exists; an existing photo is replaced only after explicit selection. Durable card photos remain in private app file storage, do not appear in the gallery, and are assigned to exactly one card by local metadata. Deleting the card also removes its metadata and photo file; file deletion is best-effort. A full Collixa backup explicitly created by the user includes these user-owned photos together with Collection data.</p>
+      <p>The card image and OCR result are processed locally for this scan and are not transmitted as recognition input to Google, TCGdex, or a Collixa server. Collixa uses the bundled Latin ML Kit model, so the OCR operation does not require a model download. According to Google's information, the ML Kit SDK may independently establish connections for bug fixes, model or hardware compatibility, and technical performance and usage metrics. This may include processing device and app information, an installation-specific identifier, performance data, API configuration, and event or error information. Collixa itself does not log or transmit card images or Base64 image data.</p>
+      <p>In the Google Play Data Safety declaration reviewed on 15 September 2026, possible technical ML Kit telemetry is declared as optionally collected, not shared, not processed only ephemerally within a session, and encrypted in transit. The declared data types are diagnostics for analytics, other app performance data for analytics, app interactions for analytics and app functionality, and device or other IDs for analytics. These declarations relate to technical SDK processing by Google and not to a first-party Collixa analytics service.</p>
     </section>
 
     <section class="card">
-      <h2>9. Storage and deletion</h2>
-      <p>Users can delete individual cards within the app. Their associated placements are also removed.</p>
+      <h2>10. Manual backup export</h2>
+      <p>Users can explicitly create a complete, portable Collixa backup. It contains a consistent copy of the local database, including the collection, settings, and local card catalog, as well as permanently stored user-owned card photos. The backup is not encrypted.</p>
+      <p>Collixa opens the Android system dialog where the user chooses the filename and storage location. Depending on the document providers configured on the device, the user may also choose a cloud storage provider. Collixa does not integrate such a provider, does not automatically upload backups, and does not transmit them to a Collixa server. The selected external document provider's terms and privacy information apply when it is used. After export, the user is responsible for protecting, retaining, and potentially sharing the exported file. Temporary snapshot and archive files in the private app area are deleted best-effort after success, cancellation, or error.</p>
+      <p>Users can likewise explicitly select and restore a Collixa backup through the Android system dialog. Collixa first copies the selected file into a private staging area, validates its structure, database, file sizes, and checksums, and only then asks for explicit confirmation. After confirmation, the current local database and user-owned card photos are replaced with the backup state. Collixa temporarily keeps a private rollback state and local restore journal for a failed or interrupted restore. Staging, rollback, and journal files are deleted best-effort after a completed restore or successful recovery. Import creates no network communication and does not upload the selected file.</p>
+    </section>
+
+    <section class="card">
+      <h2>11. Permissions</h2>
+      <p>Collixa uses the camera permission exclusively for a local card scan explicitly initiated by the user. The internet permission is required for the optional TCGdex catalog sync and targeted TCGdex card-detail request. Collixa does not request an additional microphone or media/gallery permission for scanning or card photos, and it does not request contacts or location permissions. Backup export and import use the Android system document picker.</p>
+    </section>
+
+    <section class="card">
+      <h2>12. Storage and deletion</h2>
+      <p>Users can delete individual cards within the app. Their associated placements and stored card-photo metadata are also removed; related photo files are deleted best-effort.</p>
       <p>Deleting a binder removes the binder, its placements, and its sorting settings. The physical cards previously stored in it are not deleted automatically and remain without a binder assignment.</p>
-      <p>Locally stored data may be lost when the app is uninstalled or reset, or when its app data is cleared. Collixa does not retain a server-side copy from which this data could be restored.</p>
+      <p>Locally stored data may be lost when the app is uninstalled or reset, or when its app data is cleared. Collixa does not retain a server-side copy from which this data could be restored. A Collixa backup previously saved by the user in a suitable location remains unaffected and can be imported again through the restore function.</p>
     </section>
 
     <section class="card">
-      <h2>10. Data security</h2>
-      <p>The security of locally stored data also depends on the security of the device and its operating system. Users should protect their device appropriately and be aware that Collixa currently does not provide its own cloud backup.</p>
+      <h2>13. Data security</h2>
+      <p>The security of locally stored data also depends on the security of the device and its operating system. Users should appropriately protect their device and unencrypted exported backup files. Collixa does not provide its own cloud backup.</p>
     </section>
 
     <section class="card">
-      <h2>11. Changes to this privacy policy</h2>
+      <h2>14. Changes to this privacy policy</h2>
       <p>This privacy policy may be updated when Collixa's features, services used by the app, or legal requirements change. The current version will be published on the public privacy-policy page.</p>
     </section>
 
     <section class="card">
-      <h2>12. Contact</h2>
+      <h2>15. Contact</h2>
       <p>For privacy questions, contact the controller at <a href="mailto:collixa.app@gmail.com">collixa.app@gmail.com</a>.</p>
     </section>
   </article>
