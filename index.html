@@ -151,7 +151,7 @@
   <article id="policy-de" class="policy" lang="de">
     <header>
       <h1>Datenschutzerklärung für Collixa</h1>
-      <p class="updated">Stand: 15. September 2026</p>
+      <p class="updated">Stand: 20. September 2026</p>
     </header>
 
     <section class="card">
@@ -214,9 +214,10 @@
     </section>
 
     <section class="card">
-      <h2>9. Kamera und lokale Texterkennung</h2>
-      <p>Wenn Nutzer im Identifikationsablauf ausdrücklich „Scannen“ auswählen, kann Collixa eine einzelne Aufnahme der physischen Karte erstellen und den darauf sichtbaren Text mit Google ML Kit Text Recognition v2 auf dem Gerät erkennen. Das vollständige Kamerabild wird als temporäre native Bildreferenz im Arbeitsspeicher verarbeitet und nach dem Erkennungsversuch verworfen. Zusätzlich wird der vom sichtbaren Kartenrahmen festgelegte Ausschnitt vorübergehend im privaten App-Cache gespeichert. Dieser temporäre Ausschnitt wird bei erneutem Scan, Abbruch, Ablehnung oder erfolgreicher Übernahme soweit technisch möglich gelöscht. Das OCR-Ergebnis wird nicht dauerhaft gespeichert.</p>
-      <p>Der Nutzer kann ausdrücklich auswählen, diesen zugeschnittenen Ausschnitt als dauerhaftes Foto der betreffenden physischen Karte zu speichern. Ohne vorhandenes Foto ist die Option vorausgewählt; ein vorhandenes Foto wird nur nach ausdrücklicher Auswahl ersetzt. Dauerhafte Kartenfotos liegen ausschließlich im privaten App-Dateispeicher, erscheinen nicht in der Galerie und werden über lokale Metadaten genau einer Karte zugeordnet. Beim Löschen der Karte werden Metadaten und Fotodatei ebenfalls entfernt; die Dateilöschung erfolgt soweit technisch möglich. Ein vom Nutzer ausdrücklich erstelltes vollständiges Collixa-Backup enthält diese nutzereigenen Fotos zusammen mit den Sammlungsdaten.</p>
+      <h2>9. Kamera, ausgewählte Bilder und lokale Texterkennung</h2>
+      <p>Wenn Nutzer im Identifikations- oder Neue-Karte-Ablauf ausdrücklich einen Scan starten, können sie entweder eine Aufnahme der physischen Karte mit der Kamera erstellen oder ein oder mehrere Bilder über den System-Fotopicker auswählen. Collixa durchsucht die Galerie nicht automatisch und verarbeitet nur die vom Nutzer ausdrücklich ausgewählten Bilder. Der darauf sichtbare Text wird mit Google ML Kit Text Recognition v2 auf dem Gerät erkannt.</p>
+      <p>Das vollständige Kamerabild wird als temporäre native Bildreferenz verarbeitet und nach der Erstellung des Karten-Ausschnitts wieder entfernt. Von ausgewählten Bildern erstellt Collixa für die lokale Verarbeitung eine private temporäre Kopie; die ausgewählten Originalbilder werden nicht verändert oder gelöscht, und ihre URI beziehungsweise ihr Dateipfad wird nicht dauerhaft in SQLite gespeichert. Temporäre Bilddateien werden bei erneutem Scan, Abbruch, Ablehnung, erfolgreicher Übernahme und im normalen App-Lifecycle soweit technisch möglich bereinigt. Das OCR-Ergebnis wird nicht dauerhaft gespeichert.</p>
+      <p>Der Nutzer kann ausdrücklich auswählen, das temporäre Kartenbild als dauerhaftes Foto der betreffenden physischen Karte zu speichern. Ohne vorhandenes Foto ist die Option vorausgewählt; ein vorhandenes Foto wird nur nach ausdrücklicher Auswahl ersetzt. Beim Hinzufügen einer neu gescannten oder aus einem ausgewählten Bild erkannten Karte wird das temporäre Kartenbild erst nach der ausdrücklichen Aktion „Karte hinzufügen“ als ihr Frontfoto gespeichert. Dauerhafte Kartenfotos liegen ausschließlich im privaten App-Dateispeicher, erscheinen nicht in der Galerie und werden über lokale Metadaten genau einer Karte zugeordnet. Beim Löschen der Karte werden Metadaten und Fotodatei ebenfalls entfernt; die Dateilöschung erfolgt soweit technisch möglich. Ein vom Nutzer ausdrücklich erstelltes vollständiges Collixa-Backup enthält diese nutzereigenen Fotos zusammen mit den Sammlungsdaten.</p>
       <p>Das Kartenbild und das OCR-Ergebnis werden für diesen Scan lokal verarbeitet und nicht als Recognition-Input an Google, TCGdex oder einen Collixa-Server übertragen. Collixa verwendet das gebündelte lateinische ML-Kit-Modell; für den eigentlichen OCR-Lauf ist deshalb kein Model-Download erforderlich. Nach den Hinweisen von Google kann das ML-Kit-SDK unabhängig vom eigentlichen Recognition-Input Verbindungen für Fehlerbehebungen, Modell- oder Hardware-Kompatibilität sowie technische Betriebs- und Nutzungsmetriken herstellen. Dabei können insbesondere Geräte- und App-Informationen, eine installationsbezogene Kennung, Leistungsdaten, API-Konfigurationen sowie Ereignis- und Fehlerangaben verarbeitet werden. Collixa protokolliert oder überträgt selbst keine Kartenbilder oder Base64-Bilddaten.</p>
       <p>In der am 15. September 2026 überprüften Google-Play-Data-Safety-Erklärung sind mögliche technische ML-Kit-Telemetriedaten als optional erhoben, nicht geteilt, nicht nur sitzungsspezifisch verarbeitet und bei der Übertragung verschlüsselt angegeben. Deklariert sind Diagnosedaten für Analyse, andere App-Leistungsdaten für Analyse, App-Interaktionen für Analyse und Funktionen der App sowie Geräte- oder andere IDs für Analyse. Diese Angaben beziehen sich auf die technische SDK-Verarbeitung durch Google und nicht auf einen eigenen Collixa-Analytics-Dienst.</p>
     </section>
@@ -230,7 +231,7 @@
 
     <section class="card">
       <h2>11. Berechtigungen</h2>
-      <p>Collixa verwendet die Kameraberechtigung ausschließlich für den vom Nutzer ausgelösten lokalen Kartenscan. Die Internetberechtigung wird für den optionalen TCGdex-Katalogsync und den gezielten TCGdex-Kartendetailabruf benötigt. Für Scanner und Kartenfotos fordert Collixa keine zusätzliche Mikrofon- oder Medien-/Galerieberechtigung an; auch Kontakt- oder Standortberechtigungen werden nicht angefragt. Backup-Export und -Import verwenden den Android-Systemdialog zur Dokumentauswahl.</p>
+      <p>Collixa verwendet die Kameraberechtigung ausschließlich für den vom Nutzer ausgelösten lokalen Kartenscan. Für Bilder aus der Galerie verwendet Collixa den System-Fotopicker, über den der Nutzer die zu verarbeitenden Bilder selbst auswählt; eine breite Medien- oder Galerieberechtigung wird dafür nicht angefordert. Die Internetberechtigung wird für den optionalen TCGdex-Katalogsync und den gezielten TCGdex-Kartendetailabruf benötigt. Für Scanner und Kartenfotos fordert Collixa keine zusätzliche Mikrofonberechtigung an; auch Kontakt- oder Standortberechtigungen werden nicht angefragt. Backup-Export und -Import verwenden den Android-Systemdialog zur Dokumentauswahl.</p>
     </section>
 
     <section class="card">
@@ -259,7 +260,7 @@
   <article id="policy-en" class="policy" lang="en" hidden>
     <header>
       <h1>Privacy Policy for Collixa</h1>
-      <p class="updated">Last updated: 15 September 2026</p>
+      <p class="updated">Last updated: 20 September 2026</p>
     </header>
 
     <section class="card">
@@ -322,9 +323,10 @@
     </section>
 
     <section class="card">
-      <h2>9. Camera and on-device text recognition</h2>
-      <p>When users explicitly select “Scan” in the identification flow, Collixa can capture one image of the physical card and recognize visible text on the device using Google ML Kit Text Recognition v2. The full camera image is processed as a temporary native image reference in memory and discarded after the recognition attempt. In addition, the crop defined by the visible card guide is stored temporarily in the app's private cache. This temporary crop is deleted where technically possible after a rescan, cancellation, rejection, or successful promotion. The OCR result is not stored persistently.</p>
-      <p>Users can explicitly choose to save this crop as a durable photo of the relevant physical card. The option is selected by default when no photo exists; an existing photo is replaced only after explicit selection. Durable card photos remain in private app file storage, do not appear in the gallery, and are assigned to exactly one card by local metadata. Deleting the card also removes its metadata, and the photo file is deleted where technically possible. A full Collixa backup explicitly created by the user includes these user-owned photos together with Collection data.</p>
+      <h2>9. Camera, selected images, and on-device text recognition</h2>
+      <p>When users explicitly start a scan in the identification or new-card flow, they can either capture an image of the physical card with the camera or select one or more images through the system photo picker. Collixa does not automatically search the photo library and processes only the images explicitly selected by the user. Visible text is recognized on the device using Google ML Kit Text Recognition v2.</p>
+      <p>The full camera image is processed as a temporary native image reference and removed again after the card crop has been created. For selected images, Collixa creates a private temporary copy for local processing; the selected originals are not modified or deleted, and their URI or file path is not stored persistently in SQLite. Temporary image files are cleaned up where technically possible after a rescan, cancellation, rejection, successful promotion, and during the normal app lifecycle. The OCR result is not stored persistently.</p>
+      <p>Users can explicitly choose to save the temporary card image as a durable photo of the relevant physical card. The option is selected by default when no photo exists; an existing photo is replaced only after explicit selection. When adding a new card scanned with the camera or recognized from a selected image, the temporary card image is saved as its front photo only after the explicit “Add card” action. Durable card photos remain in private app file storage, do not appear in the photo library, and are assigned to exactly one card by local metadata. Deleting the card also removes its metadata, and the photo file is deleted where technically possible. A full Collixa backup explicitly created by the user includes these user-owned photos together with collection data.</p>
       <p>The card image and OCR result are processed locally for this scan and are not transmitted as recognition input to Google, TCGdex, or a Collixa server. Collixa uses the bundled Latin ML Kit model, so the OCR operation does not require a model download. According to Google's information, the ML Kit SDK may independently establish connections for bug fixes, model or hardware compatibility, and technical performance and usage metrics. This may include processing device and app information, an installation-specific identifier, performance data, API configuration, and event or error information. Collixa itself does not log or transmit card images or Base64 image data.</p>
       <p>In the Google Play Data Safety declaration reviewed on 15 September 2026, possible technical ML Kit telemetry is declared as optionally collected, not shared, not processed only ephemerally within a session, and encrypted in transit. The declared data types are diagnostics for analytics, other app performance data for analytics, app interactions for analytics and app functionality, and device or other IDs for analytics. These declarations relate to technical SDK processing by Google and not to a first-party Collixa analytics service.</p>
     </section>
@@ -338,7 +340,7 @@
 
     <section class="card">
       <h2>11. Permissions</h2>
-      <p>Collixa uses the camera permission exclusively for a local card scan explicitly initiated by the user. The internet permission is required for the optional TCGdex catalog sync and targeted TCGdex card-detail request. Collixa does not request an additional microphone or media/gallery permission for scanning or card photos, and it does not request contacts or location permissions. Backup export and import use the Android system document picker.</p>
+      <p>Collixa uses the camera permission exclusively for a local card scan explicitly initiated by the user. For images from the photo library, Collixa uses the system photo picker, through which the user selects the images to be processed; no broad media or photo-library permission is requested for this purpose. The internet permission is required for the optional TCGdex catalog sync and targeted TCGdex card-detail request. Collixa does not request an additional microphone permission for scanning or card photos, and it does not request contacts or location permissions. Backup export and import use the Android system document picker.</p>
     </section>
 
     <section class="card">
