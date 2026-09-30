@@ -151,7 +151,7 @@
   <article id="policy-de" class="policy" lang="de">
     <header>
       <h1>Datenschutzerklärung für Collixa</h1>
-      <p class="updated">Stand: 25. September 2026</p>
+      <p class="updated">Stand: 30. September 2026</p>
     </header>
 
     <section class="card">
@@ -204,8 +204,10 @@
 
     <section class="card">
       <h2>7. Optionaler Kartenkatalog-Sync</h2>
-      <p>Nutzer können in den Einstellungen ausdrücklich einen öffentlichen Pokémon-Kartenkatalog von TCGdex herunterladen oder aktualisieren. Dabei ruft Collixa ausschließlich allgemeine öffentliche Katalogmetadaten in deutscher und englischer Sprache ab und speichert diese lokal auf dem Gerät. Die normale Kartensuche verwendet nur diesen lokalen Katalog und stellt keine Netzwerkverbindung her. Erst wenn der Nutzer eine konkrete Katalogkarte zur Identifizierung auswählt, kann Collixa deren öffentliche Katalog-ID in einem gezielten Detailabruf an TCGdex senden, um sammlungsrelevante Variantenangaben vorzuschlagen.</p>
+      <p>Nutzer können in den Einstellungen ausdrücklich einen öffentlichen Kartenkatalog von TCGdex herunterladen oder aktualisieren. Dabei ruft Collixa ausschließlich allgemeine öffentliche Katalogmetadaten in deutscher und englischer Sprache ab und speichert diese lokal auf dem Gerät. Die normale Kartensuche verwendet nur diesen lokalen Katalog und stellt keine Netzwerkverbindung her. Erst wenn der Nutzer eine konkrete Katalogkarte zur Identifizierung auswählt, kann Collixa deren öffentliche Katalog-ID in einem gezielten Detailabruf an TCGdex senden, um sammlungsrelevante Variantenangaben vorzuschlagen.</p>
       <p>Collixa überträgt dabei keine OwnedCard-ID, Sammlungsdaten, Binder, Kartenpositionen, Zustand, Notizen, Nutzerbilder, Recognition-Bilder, geräteinternen IDs oder sonstigen personenbezogenen Collixa-Daten an TCGdex. Collixa lädt keine Nutzerbilder zu TCGdex hoch und lädt auch keine Kartenbilder herunter. Beim Netzwerkabruf verarbeitet TCGdex technisch übliche Verbindungsdaten, insbesondere IP-Adresse und HTTP-Anfragedaten. Für diese Verarbeitung gelten die Datenschutzinformationen von TCGdex.</p>
+      <p>Nach einem ausdrücklich ausgelösten und erfolgreich abgeschlossenen Katalog-Download oder -Update kann Collixa ergänzende öffentliche Seltenheitsmetadaten aus dem statischen Collixa-Katalog abrufen, der über GitHub Pages unter <code>dako191.github.io/collixa-catalog</code> veröffentlicht ist. Die App ruft zunächst ein gemeinsames öffentliches Manifest und anschließend nur die öffentlichen Set-Metadatendateien ab, die für Sets mit mindestens einer bestätigten eigenen Katalogkarte benötigt werden. Dieser Abruf ist vom TCGdex-Katalogabruf getrennt. Die resultierenden Seltenheitsmetadaten werden in der lokalen SQLite-Datenbank gespeichert und offline wiederverwendet; beim App-Start sowie beim Scannen oder Hinzufügen von Karten erfolgt kein automatischer Abruf.</p>
+      <p>Diese GitHub-Pages-Anfragen enthalten keine OwnedCard-IDs, geräteinternen Collixa-IDs, Kartenmengen, Zustände, Notizen, Bilder, Binder oder Positionen und verwenden keinen Request-Body. Collixa fügt ihnen keine Konto-, Authentifizierungs-, Analytics- oder Tracking-Kennung und keine nutzerspezifischen Query-Parameter hinzu. Da jede öffentliche Set-Datei über ihre öffentliche Set-ID im URL-Pfad adressiert wird, kann GitHub technisch die angeforderte Set-ID beziehungsweise den Pfad zusammen mit üblichen Verbindungsdaten wie IP-Adresse und HTTP-Metadaten erhalten. Die Anfrage überträgt damit weder die vollständige Sammlung noch den Besitz einzelner Karten; aus den angeforderten öffentlichen Set-Metadaten kann jedoch eine begrenzte Set-bezogene Schlussfolgerung möglich sein. Für die Verarbeitung auf der GitHub-Infrastruktur gelten die Datenschutzbestimmungen von GitHub.</p>
     </section>
 
     <section class="card">
@@ -231,7 +233,7 @@
 
     <section class="card">
       <h2>11. Berechtigungen</h2>
-      <p>Collixa verwendet die Kameraberechtigung ausschließlich für den vom Nutzer ausgelösten lokalen Kartenscan. Für Bilder aus der Galerie verwendet Collixa den System-Fotopicker, über den der Nutzer die zu verarbeitenden Bilder selbst auswählt; eine breite Medien- oder Galerieberechtigung wird dafür nicht angefordert. Die Internetberechtigung wird für den optionalen TCGdex-Katalogsync und den gezielten TCGdex-Kartendetailabruf benötigt. Für Scanner und Kartenfotos fordert Collixa keine zusätzliche Mikrofonberechtigung an; auch Kontakt- oder Standortberechtigungen werden nicht angefragt. Backup-Export und -Import verwenden den Android-Systemdialog zur Dokumentauswahl.</p>
+      <p>Collixa verwendet die Kameraberechtigung ausschließlich für den vom Nutzer ausgelösten lokalen Kartenscan. Für Bilder aus der Galerie verwendet Collixa den System-Fotopicker, über den der Nutzer die zu verarbeitenden Bilder selbst auswählt; eine breite Medien- oder Galerieberechtigung wird dafür nicht angefordert. Die Internetberechtigung wird für den optionalen TCGdex-Katalogsync, den gezielten TCGdex-Kartendetailabruf und die nach einer ausdrücklichen Kataloginstallation oder -aktualisierung aus dem statischen Collixa-Katalog über GitHub Pages angeforderten ergänzenden öffentlichen Seltenheitsmetadaten benötigt. Für Scanner und Kartenfotos fordert Collixa keine zusätzliche Mikrofonberechtigung an; auch Kontakt- oder Standortberechtigungen werden nicht angefragt. Backup-Export und -Import verwenden den Android-Systemdialog zur Dokumentauswahl.</p>
     </section>
 
     <section class="card">
@@ -260,7 +262,7 @@
   <article id="policy-en" class="policy" lang="en" hidden>
     <header>
       <h1>Privacy Policy for Collixa</h1>
-      <p class="updated">Last updated: 25 September 2026</p>
+      <p class="updated">Last updated: 30 September 2026</p>
     </header>
 
     <section class="card">
@@ -313,8 +315,10 @@
 
     <section class="card">
       <h2>7. Optional card catalog sync</h2>
-      <p>Users can explicitly download or update a public Pokémon card catalog from TCGdex in the settings. Collixa retrieves only general public catalog metadata in German and English and stores it locally on the device. Normal card search uses only this local catalog and does not establish a network connection. Only after the user selects a specific catalog card for identification may Collixa send that card's public catalog ID to TCGdex in one targeted detail request to suggest collection-relevant variant information.</p>
+      <p>Users can explicitly download or update a public card catalog from TCGdex in the settings. Collixa retrieves only general public catalog metadata in German and English and stores it locally on the device. Normal card search uses only this local catalog and does not establish a network connection. Only after the user selects a specific catalog card for identification may Collixa send that card's public catalog ID to TCGdex in one targeted detail request to suggest collection-relevant variant information.</p>
       <p>Collixa does not transmit an OwnedCard ID, collection data, binders, card placements, condition, notes, user images, recognition images, internal device identifiers, or other personal Collixa data to TCGdex. Collixa does not upload user images to TCGdex and does not download card images. During the network request, TCGdex technically processes ordinary connection data, including the IP address and HTTP request data. TCGdex's privacy information applies to this processing.</p>
+      <p>After an explicitly requested catalog download or update has completed successfully, Collixa may request supplementary public rarity metadata from Collixa's static catalog published through GitHub Pages at <code>dako191.github.io/collixa-catalog</code>. The app first requests a common public manifest and then downloads only the public Set metadata files required for Sets containing at least one confirmed owned catalog card. This request is separate from the TCGdex catalog request. The resulting rarity metadata is stored in the local SQLite database and reused offline; no automatic request is made at app startup or while scanning or adding cards.</p>
+      <p>These GitHub Pages requests contain no OwnedCard IDs, device-internal Collixa IDs, card quantities, conditions, notes, images, binders, or placements and have no request body. Collixa adds no account, authentication, analytics, or tracking identifier and no user-specific query parameter. Because each public Set file is addressed by its public Set ID in the URL path, GitHub can technically receive the requested Set ID/path together with ordinary connection data such as the IP address and HTTP metadata. The request therefore does not transmit the full collection or individual card ownership, but the requested public Set metadata can permit a limited Set-related inference. GitHub's privacy terms apply to processing on GitHub infrastructure.</p>
     </section>
 
     <section class="card">
@@ -340,7 +344,7 @@
 
     <section class="card">
       <h2>11. Permissions</h2>
-      <p>Collixa uses the camera permission exclusively for a local card scan explicitly initiated by the user. For images from the photo library, Collixa uses the system photo picker, through which the user selects the images to be processed; no broad media or photo-library permission is requested for this purpose. The internet permission is required for the optional TCGdex catalog sync and targeted TCGdex card-detail request. Collixa does not request an additional microphone permission for scanning or card photos, and it does not request contacts or location permissions. Backup export and import use the Android system document picker.</p>
+      <p>Collixa uses the camera permission exclusively for a local card scan explicitly initiated by the user. For images from the photo library, Collixa uses the system photo picker, through which the user selects the images to be processed; no broad media or photo-library permission is requested for this purpose. The internet permission is required for the optional TCGdex catalog sync, the targeted TCGdex card-detail request, and the supplementary public rarity metadata requested from Collixa's static catalog through GitHub Pages after an explicit catalog install or update. Collixa does not request an additional microphone permission for scanning or card photos, and it does not request contacts or location permissions. Backup export and import use the Android system document picker.</p>
     </section>
 
     <section class="card">
